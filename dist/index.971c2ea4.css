@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-p, a {
+p, a, span {
   margin: 0;
   padding: 0;
 }
@@ -36,10 +36,6 @@ p, a {
     padding-left: 0;
     padding-right: 0;
   }
-}
-
-[data-cognigy-webchat-root] .webchat-chat-history > div {
-  padding-top: 200px;
 }
 
 .webchat-avatar {
