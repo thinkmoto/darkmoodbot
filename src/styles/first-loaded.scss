@@ -1,0 +1,14 @@
+@import "./loader";
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+}
+
+p, a, span{
+    padding: 0;
+    margin: 0;
+}
