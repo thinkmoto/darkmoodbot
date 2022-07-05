@@ -1,0 +1,211 @@
+[data-cognigy-webchat-root] .webchat-toggle-button {
+  display: none;
+}
+
+[data-cognigy-webchat-root] .webchat {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 0;
+  background-color: black;
+  color: white;
+  padding: 0;
+  margin: 0 auto;
+  box-shadow: none;
+}
+[data-cognigy-webchat-root] .webchat ::-webkit-scrollbar {
+  width: 0;
+}
+
+@media screen and (min-width: 992px) {
+  [data-cognigy-webchat-root] .webchat,
+.copyright__content-wrap {
+    max-width: 1140px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  [data-cognigy-webchat-root] .webchat,
+.copyright__content-wrap {
+    max-width: 1200px;
+  }
+}
+
+.webchat-avatar {
+  display: none;
+}
+
+[data-cognigy-webchat-root] .webchat-message-row {
+  padding: 0;
+}
+
+[data-cognigy-webchat-root] .regular-message {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: #faf1f1;
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 420;
+  font-size: 32px;
+  line-height: 110%;
+  margin: 15px 0;
+}
+@media screen and (min-width: 1400px) {
+  [data-cognigy-webchat-root] .regular-message {
+    font-size: 64px;
+    line-height: 83px;
+  }
+}
+
+[data-cognigy-webchat-root] .regular-message.user {
+  color: #8c8181;
+}
+
+#cognigyBrandingLink {
+  display: none;
+}
+
+[data-cognigy-webchat-root] #webchatInputMessageSendMessageButton {
+  fill: white;
+  padding-left: 15px;
+}
+[data-cognigy-webchat-root] #webchatInputMessageSendMessageButton[disabled] {
+  fill: #8C8181;
+}
+
+[data-cognigy-webchat-root] .webchat-input {
+  background-color: transparent;
+  box-shadow: none;
+  padding-bottom: 30px !important;
+  width: 100%;
+}
+@media screen and (min-width: 1400px) {
+  [data-cognigy-webchat-root] .webchat-input {
+    padding-bottom: 143px !important;
+  }
+}
+
+[data-cognigy-webchat-root] .webchat-input-message-input {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  text-align: right;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #8c8181;
+  padding-top: 60px;
+  margin: 0;
+  border-radius: 0;
+  color: white;
+  padding-left: 0;
+  padding-right: 0;
+}
+[data-cognigy-webchat-root] .webchat-input-message-input:focus {
+  outline: none !important;
+}
+
+input[type=text],
+form[data-active=true],
+.webchat-input-menu-form,
+.webchat-chat-history {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  outline: none !important;
+  border-bottom: none !important;
+}
+
+.copyright {
+  position: fixed;
+  z-index: 99999;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+.copyright__content-wrap {
+  padding: 30px;
+  color: white;
+  text-align: right;
+  width: 100%;
+}
+.copyright__text, .copyright__link {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.01em;
+  display: none;
+  /* Medium Grey */
+  color: #8c8181;
+}
+.copyright__text {
+  text-align: left;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  background: black;
+  box-shadow: 0px 24px 60px black;
+  display: none;
+}
+[data-cognigy-webchat-root] .webchat-header-bar {
+  width: 100%;
+  background: inherit;
+  height: auto;
+  cursor: pointer;
+}
+@media screen and (min-width: 1400px) {
+  [data-cognigy-webchat-root] .webchat-header-bar {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+[data-cognigy-webchat-root] .webchat-header-title {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.01em;
+  /* Medium Grey */
+  color: #8c8181;
+  margin: 30px 0;
+}
+@media screen and (min-width: 1400px) {
+  [data-cognigy-webchat-root] .webchat-header-title {
+    margin: 60px 0;
+  }
+}
+
+[data-cognigy-webchat-root] .webchat-header-close-button {
+  display: none;
+}
+
+[data-cognigy-webchat-root] .webchat-header-bar,
+[data-cognigy-webchat-root] .webchat-chat-history,
+[data-cognigy-webchat-root] .webchat-input-menu-form,
+.copyright__content-wrap {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+@media screen and (min-width: 1400px) {
+  [data-cognigy-webchat-root] .webchat-header-bar,
+[data-cognigy-webchat-root] .webchat-chat-history,
+[data-cognigy-webchat-root] .webchat-input-menu-form,
+.copyright__content-wrap {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

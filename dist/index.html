@@ -6,17 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- <link rel="shortcut icon" href="/public/fav.ico"> -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.bb4effea.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.aa095f13.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.128c8a98.png">
-	<link rel="mask-icon" href="/safari-pinned-tab.aa06d099.svg" color="#000000">
-	<meta name="msapplication-TileColor" content="#fae908">
-	<meta name="theme-color" content="#fae908">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#000000">
 
     <title>Dark Mood for Conversational Interfaces”</title>
-    <link rel="stylesheet" href="/index.4d7ffe0f.css">
+    <link rel="stylesheet" href="first-loaded.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -25,34 +22,50 @@
     <div class="loader">Loading...</div>
   </div>
 
-  <div class="copyright">
+  <!-- <div class="copyright">
     <div class="copyright__content-wrap">
       <p class="copyright__text">Dark Mood for Conversational Experiences</p>
       <a href="" class="copyright__link">think moto 2022</a>
-    </div>
+    </div> -->
   </div>
     <script src="https://github.com/Cognigy/WebchatWidget/releases/latest/download/webchat.js"></script>
-    <link rel="stylesheet" href="/index.971c2ea4.css">
-    <script>initWebchat("https://endpoint-trial.cognigy.ai/94528f7d54978f819ac6e10912b2bf28e9dbccc78658eb421a9ed2cf29441f4e", {
-    settings: {
-        colorScheme: '#FFF',
-        startBehavior: 'injection',
-        getStartedText: '',
-        disableHtmlInput: true
-    },
-    forceWebsockets: true
-}).then(function(webchat) {
-    webchat.open();
-});
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        initWebchat(
+            "https://endpoint-trial.cognigy.ai/94528f7d54978f819ac6e10912b2bf28e9dbccc78658eb421a9ed2cf29441f4e",
+      {
+        settings: {
+          colorScheme: '#FFF',
+          startBehavior: 'injection',
+          getStartedText: '',
+          disableHtmlInput: true,
+        },
+        forceWebsockets: true
+      }
+        ).then(function(webchat){
+          webchat.open();
 
-</script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script>$('document').ready(function() {
-    setTimeout(function() {
-        $("#loader-wrap").fadeOut('slow');
-    }, 1000);
-});
+          setTimeout(function(){
+            document.querySelector('.webchat-header-bar').addEventListener('click', function(){
+              window.open('http://thinkmoto.de/', '_blank').focus();
+            });
+            function setWebchatFullHeight() {
+              document.querySelector('.webchat').style.height = window.innerHeight+'px';
+            }
 
-</script>
+            window.onresize = setWebchatFullHeight;
+
+            setWebchatFullHeight()
+          }, 250)
+        });
+    </script>
+    <script>
+      $('document').ready(function(){
+        setTimeout(function(){
+          $("#loader-wrap").fadeOut('slow');
+        }, 1000);
+      })
+    </script>
 </body>
 </html>
