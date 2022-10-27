@@ -104,9 +104,48 @@
   color: white;
   padding-left: 0;
   padding-right: 0;
+  transition: 0.3s;
+}
+@media screen and (min-width: 992px) {
+  [data-cognigy-webchat-root] .webchat-input-message-input {
+    font-size: 22px;
+  }
+}
+[data-cognigy-webchat-root] .webchat-input-message-input::-moz-placeholder {
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+[data-cognigy-webchat-root] .webchat-input-message-input:-ms-input-placeholder {
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+[data-cognigy-webchat-root] .webchat-input-message-input::placeholder {
+  transition: 0.3s;
 }
 [data-cognigy-webchat-root] .webchat-input-message-input:focus {
   outline: none !important;
+  border-color: white;
+}
+[data-cognigy-webchat-root] .webchat-input-message-input:focus::-moz-placeholder {
+  color: white;
+}
+[data-cognigy-webchat-root] .webchat-input-message-input:focus:-ms-input-placeholder {
+  color: white;
+}
+[data-cognigy-webchat-root] .webchat-input-message-input:focus::placeholder {
+  color: white;
+}
+[data-cognigy-webchat-root] .webchat-input-message-input:hover {
+  border-color: white;
+}
+[data-cognigy-webchat-root] .webchat-input-message-input:hover::-moz-placeholder {
+  color: white;
+}
+[data-cognigy-webchat-root] .webchat-input-message-input:hover:-ms-input-placeholder {
+  color: white;
+}
+[data-cognigy-webchat-root] .webchat-input-message-input:hover::placeholder {
+  color: white;
 }
 
 input[type=text],
@@ -163,7 +202,6 @@ form[data-active=true],
   width: 100%;
   background: inherit;
   height: auto;
-  cursor: pointer;
 }
 @media screen and (min-width: 1400px) {
   [data-cognigy-webchat-root] .webchat-header-bar {
@@ -179,9 +217,14 @@ form[data-active=true],
   font-size: 18px;
   line-height: 23px;
   letter-spacing: 0.01em;
+  transition: 0.3s;
+  cursor: pointer;
   /* Medium Grey */
   color: #8c8181;
   margin: 30px 0;
+}
+[data-cognigy-webchat-root] .webchat-header-title:hover {
+  color: white;
 }
 @media screen and (min-width: 1400px) {
   [data-cognigy-webchat-root] .webchat-header-title {
